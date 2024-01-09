@@ -2,8 +2,8 @@ import React from 'react'
 
 type Props = {}
 
-const Congigure = (props: Props) => {
-    return <div>Congigure</div>
+const Configure = (props: Props) => {
+    return <div>Configure</div>
 }
 
-export default Congigure
+export default Configure

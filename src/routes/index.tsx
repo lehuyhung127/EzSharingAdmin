@@ -12,6 +12,12 @@ import ProductDetailPage from '@/pages/Client/ProductDetailPage'
 import ShopPage from '@/pages/Client/ShopPage'
 import { Routes, Route } from 'react-router-dom'
 import path from 'path'
+import User from '@/pages/Admin/User'
+import Course from '@/pages/Admin/Course'
+import QuizQuestion from '@/pages/Admin/QuizQuestion'
+import Survey from '@/pages/Admin/Survey'
+import Configure from '@/pages/Admin/Configure'
+import Pages from '@/pages/Admin/pages'
 
 const Routers = () => {
     return (
@@ -32,7 +38,13 @@ const Routers = () => {
             </Route>
             <Route path='admin' element={<AdminLayout />}>
                 <Route path='/admin/dashboard' element={<Dashboard />} />
+                <Route path='/admin/user' element={<User />} />
                 <Route path='/admin/article' element={<Article />} />
+                <Route path='/admin/course' element={<Course />} />
+                <Route path='/admin/quiz-question' element={<QuizQuestion />} />
+                <Route path='/admin/survey' element={<Survey />} />
+                <Route path='/admin/configure' element={<Configure />} />
+                <Route path='/admin/pages' element={<Pages />} />
             </Route>
         </Routes>
     )

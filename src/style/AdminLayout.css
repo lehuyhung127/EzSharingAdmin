@@ -1,0 +1,9 @@
+.AdminLayout_row {
+    display: flex;
+   gap: 32px;
+}
+
+.AdminLayout_items-main {
+    margin-left: 20px;
+    text-align: center;
+}
