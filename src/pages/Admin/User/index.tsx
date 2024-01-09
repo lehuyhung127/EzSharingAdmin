@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
+import ReactPaginate from 'react-paginate'
 const User = () => {
-
     const [showActions, setShowActions] = useState({})
-
+    const [currentPage, setCurrentPage] = useState(0)
+    const itemsPerPage = 5 // Số lượng mục hiển thị trên mỗi trang
     const data = [
         // Dữ liệu người dùng
         {
@@ -114,18 +115,27 @@ const User = () => {
             [id]: !prevState[id]
         }))
     }
+    // Tính toán số trang
+    const pageCount = Math.ceil(data.length / itemsPerPage)
+
+    // Hiển thị các mục trên trang hiện tại
+    const currentItems = data.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
+
+    const handlePageClick = ({ selected }) => {
+        setCurrentPage(selected)
+    }
 
     return (
         <div>
-            <div class="d-flex justify-content-between align-items-center">
-            <h2 className='fw-bold text-uppercase'>User management</h2>
-            
-                <form className="nosubmit">
-                    <input className="nosubmit" type="search" placeholder="Search..." />
+            <div className='d-flex justify-content-between align-items-center'>
+                <h2 className='fw-bold text-uppercase'>User management</h2>
+
+                <form className='nosubmit'>
+                    <input className='nosubmit' type='search' placeholder='Search...' />
                 </form>
             </div>
             <table className='table table-bordered'>
-                <thead className='thead-dark'>
+                <thead className='thead-dark rounded-3'>
                     <tr>
                         <th>ID</th>
                         <th>Full Name</th>
@@ -169,6 +179,17 @@ const User = () => {
                     )}
                 </tbody>
             </table>
+            <ReactPaginate
+                previousLabel={'Previous'}
+                nextLabel={'Next'}
+                breakLabel={'...'}
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={handlePageClick}
+                containerClassName={'pagination'}
+                activeClassName={'active'}
+            />
         </div>
     )
 }

@@ -1,0 +1,33 @@
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Điều chỉnh chiều cao tối đa của dropdown */
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung vượt quá chiều cao tối đa */
+  }
+  
+  .dropdown-item {
+    padding: 8px 12px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
