@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
+import { Icon } from '@iconify/react';
 const Course = () => {
 
     const [showActions, setShowActions] = useState({})
@@ -91,9 +92,9 @@ const Course = () => {
             <div class="d-flex justify-content-between align-items-center">
             <h2 className='fw-bold text-uppercase'>Articles</h2>
             
-                <form className="nosubmit">
-                    <input className="nosubmit" type="search" placeholder="Search..." />
-                </form>
+            <div class="card-tools">
+                <a class="btn btn-success btn-sm" href="" ><Icon icon="ic:baseline-plus" /></a>
+              </div>
             </div>
             <table className='table table-bordered'>
                 <thead className='thead-dark'>

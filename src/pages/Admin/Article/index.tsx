@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
+import { Icon } from '@iconify/react';
 const Article = () => {
 
     const [showActions, setShowActions] = useState({})
@@ -85,8 +86,7 @@ const Article = () => {
             <h2 className='fw-bold text-uppercase'>Articles</h2>
             
             <div class="card-tools">
-                <a class="btn btn-success btn-sm" href="" ><i class="fas fa-plus"></i
-                ></a>
+                <a class="btn btn-success btn-sm" href="" ><Icon icon="ic:baseline-plus" /></a>
               </div>
             </div>
             <table className='table table-bordered'>
