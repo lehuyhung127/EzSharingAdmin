@@ -66,7 +66,22 @@ const SidebarAdmin = () => {
                                 className='nav-link px-0 align-middle  d-flex align-items-center'
                             >
                                 <Icon icon='gala:settings' />
-                                <span className='ms-1 d-none d-sm-inline'>Configure</span>{' '}
+                                <div className="nav-item dropdown">
+                                    <a
+                                        href="#"
+                                        className="nav-link dropdown-toggle"
+                                        data-bs-toggle="dropdown"
+                                    ><i className="fa-solid fa-gear"></i> Configure</a >
+                                    <div className="dropdown-menu bg-transparent border-0">
+                                        <a href="" className="dropdown-item"><i className="fa-regular fa-circle"></i> Admin Accounts</a>
+                                        <a href="" className="dropdown-item"><i className="fa-regular fa-circle"></i> Role</a>
+                                        <a href="" className="dropdown-item"><i className="fa-regular fa-circle"></i> Article Category</a>
+                                        <a href="#" className="dropdown-item"><i className="nav-icon fas fa-th"></i> Quiz Question Category</a>
+                                        <a href="#" className="dropdown-item"><i className="nav-icon fas fa-th"></i> Job Felix</a>
+                                        <a href="#" className="dropdown-item"><i className="nav-icon fas fa-th"></i> Jon Type</a>
+
+                                    </div>
+                                </div>
                             </Link>
                         </li>
                         <li>
