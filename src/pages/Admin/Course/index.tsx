@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
+import { Modal, Button, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react'
 const Course = () => {
     const [showActions, setShowActions] = useState({})
+    const [showModal, setShowModal] = useState(false)
 
+    const handleShow = () => setShowModal(true)
+    const handleClose = () => setShowModal(false)
     const data = [
         // Dữ liệu người dùng
         {
@@ -92,11 +96,66 @@ const Course = () => {
                     <h2 className='fw-bold text-uppercase'>course MANAGEMENT</h2>
 
                     <div className='card-tools'>
-                        <Link className='btn btn-success btn-sm' to=''>
-                            <Icon icon='ic:baseline-plus' />
-                        </Link>
+                        <button type='button' className='btn btn-success' onClick={handleShow}>
+                            <Icon icon='ic:baseline-plus' className='text-primary' />
+                        </button>
                     </div>
                 </div>
+                <Modal show={showModal} onHide={handleClose} className="my-custom-modal">
+                    <Modal.Header closeButton>
+                        <Modal.Title>Add New Course</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        {/* Nội dung của form ở đây */}
+                        <Form className='d-block border-0'>
+                            {/* Các trường form */}
+                            <Form.Group controlId='formTitle'>
+                                <Form.Label className='text-black'>Title</Form.Label>
+                                <Form.Control type='text' />
+                            </Form.Group>
+                            <Form.Group controlId='formTitle'>
+                                <Form.Label>Author</Form.Label>
+                                <Form.Select>
+                                    <option value='author1'>Author 1</option>
+                                    <option value='author2'>Author 2</option>
+                                    <option value='author3'>Author 3</option>
+                                </Form.Select>
+                            </Form.Group>
+                            <Form.Group controlId='formTitle'>
+                                <Form.Label className='text-black'>Price</Form.Label>
+                                <Form.Control type='number' />
+                            </Form.Group>
+                            <Form.Group controlId='formDescription'>
+                                <Form.Label>Description</Form.Label>
+                                <Form.Control as='textarea' placeholder='Enter description' />
+                            </Form.Group>
+                            <Form.Group controlId='formTitle'>
+                                <Form.Label>Status</Form.Label>
+                                <Form.Select>
+                                    <option value='author1'>Author 1</option>
+                                    <option value='author2'>Author 2</option>
+                                </Form.Select>
+                            </Form.Group>
+                            <Form.Group controlId='formFile'>
+                                <Form.Label>Thumbnail</Form.Label>
+                                <Form.Control type='file' />
+                            </Form.Group>
+                            <Form.Group controlId='formFile'>
+                                <Form.Label>Cover Photo</Form.Label>
+                                <Form.Control type='file' />
+                            </Form.Group>
+                            {/* Thêm các trường form khác tương tự */}
+                        </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant='secondary' onClick={handleClose} className='text-black'>
+                            Close
+                        </Button>
+                        <Button variant='primary' onClick={handleClose} className='text-black'>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
                 <table className='table table-bordered'>
                     <thead className='thead-dark'>
                         <tr>
