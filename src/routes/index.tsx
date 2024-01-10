@@ -18,6 +18,10 @@ import QuizQuestion from '@/pages/Admin/QuizQuestion'
 import Survey from '@/pages/Admin/Survey'
 import Configure from '@/pages/Admin/Configure'
 import Pages from '@/pages/Admin/pages'
+import AdminAccount from '@/pages/Admin/AdminAccount'
+import Roles from '@/pages/Admin/Roles'
+import ArticleCategory from '@/pages/Admin/ArticleCategory'
+import QuizQuestionCategory from '@/pages/Admin/QuizQuestionCategory'
 
 const Routers = () => {
     return (
@@ -45,6 +49,10 @@ const Routers = () => {
                 <Route path='/admin/survey' element={<Survey />} />
                 <Route path='/admin/configure' element={<Configure />} />
                 <Route path='/admin/pages' element={<Pages />} />
+                <Route path='/admin/adminaccount' element={<AdminAccount />} />
+                <Route path='/admin/roles' element={<Roles />} />
+                <Route path='/admin/articlecategory' element={<ArticleCategory />} />
+                <Route path='/admin/quizquestioncategory' element={<QuizQuestionCategory/>} />
             </Route>
         </Routes>
     )

@@ -70,23 +70,23 @@ const SidebarAdmin = () => {
                         </div>
                         <ul className={`dropdown-menu ${isConfigureDropdownOpen ? 'show' : ''}`}>
                             <li className='d-block pt-2 pl-2'>
-                                <Link className='text-primary' to='/admin/configure'>
+                                <Link className='text-primary' to='/admin/adminaccount'>
                                     Admin account
                                 </Link>
                             </li>
                             <li className='d-block pt-2 pl-2'>
-                                <Link className='text-primary' to='/admin/configure'>
-                                    Role
+                                <Link className='text-primary' to='/admin/roles'>
+                                    Roles
                                 </Link>
                             </li>
                             <li className='d-block pt-2 pl-2'>
-                                <Link className='text-primary' to='/admin/configure'>
+                                <Link className='text-primary' to='/admin/articlecategory'>
                                     Article Category
                                 </Link>
                             </li>
                             <li className='d-block pt-2 pl-2'>
-                                <Link className='text-primary' to='/admin/configure'>
-                                    Quizz question category
+                                <Link className='text-primary' to='/admin/quizquestioncategory'>
+                                    Quiz question category
                                 </Link>
                             </li>
                             <li className='d-block pt-2 pl-2'>
