@@ -1,9 +1,16 @@
-.AdminLayout_row {
-    display: flex;
-   gap: 32px;
+containerAdminLayout {
+    max-width: 100%;
 }
 
-.AdminLayout_items-main {
-    margin-left: 20px;
-    text-align: center;
+.AdminLayout_row {
+    display: flex;
+    gap: 32px;
+}
+
+/* .AdminLayout_items {
+    width: 30%;
+} */
+
+.AdminLayout_main {
+    max-width: 100%;
 }

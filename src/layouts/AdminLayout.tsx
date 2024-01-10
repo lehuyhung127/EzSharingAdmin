@@ -5,13 +5,13 @@ import 'normalize.css'
 import '../style/AdminLayout.css'
 const AdminLayout = () => {
     return (
-        <div className='w-100'>
-            <HeaderClientComponent />
+        <div className='containerAdminLayout'>
+            {/* <HeaderClientComponent /> */}
             <div className='AdminLayout_row'>
                 <div className='AdminLayout_items'>
                     <SidebarAdmin />
                 </div>
-                <main className='AdminLayout_items AdminLayout_items-main mt-3'>
+                <main className='AdminLayout_main AdminLayout_items-main mt-3'>
                     <Outlet />
                 </main>
             </div>
