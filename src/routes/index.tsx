@@ -18,6 +18,7 @@ import QuizQuestion from '@/pages/Admin/QuizQuestion'
 import Survey from '@/pages/Admin/Survey'
 import Configure from '@/pages/Admin/Configure'
 import Pages from '@/pages/Admin/pages'
+import AddCourse from '@/pages/Admin/Form/AddCourse'
 
 const Routers = () => {
     return (
@@ -45,6 +46,7 @@ const Routers = () => {
                 <Route path='/admin/survey' element={<Survey />} />
                 <Route path='/admin/configure' element={<Configure />} />
                 <Route path='/admin/pages' element={<Pages />} />
+                <Route path='/admin/addcourse' element={<AddCourse />} />
             </Route>
         </Routes>
     )
