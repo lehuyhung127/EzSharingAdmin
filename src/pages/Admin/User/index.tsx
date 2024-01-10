@@ -2,7 +2,6 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
 const User = () => {
-
     const [showActions, setShowActions] = useState({})
 
     const data = [
@@ -118,13 +117,11 @@ const User = () => {
     return (
         <div className='border border-light border-3 rounded-3'>
             <div className='p-4'>
-
-
-                <div class="d-flex justify-content-between align-items-center">
+                <div class='d-flex justify-content-between align-items-center'>
                     <h2 className='fw-bold text-uppercase'>User management</h2>
 
-                    <form className="nosubmit">
-                        <input className="nosubmit" type="search" placeholder="Search..." />
+                    <form className='nosubmit'>
+                        <input className='nosubmit' type='search' placeholder='Search...' />
                     </form>
                 </div>
                 <table className='table table-bordered'>
@@ -172,21 +169,51 @@ const User = () => {
                         )}
                     </tbody>
                 </table>
-                <div className="col-sm-12 col-xl-12 d-flex justify-content-end">
-                    <div className=" rounded h-100   ">
-                        <div className="btn-toolbar " role="toolbar">
+                <div className='col-sm-12 col-xl-12 d-flex justify-content-end'>
+                    <div className=' rounded h-100   '>
+                        <div className='btn-toolbar ' role='toolbar'>
                             <div
-                                className="btn-group me-2 border border-secondary"
-                                role="group"
-                                aria-label="First group"
+                                className='btn-group me-2 border border-secondary'
+                                role='group'
+                                aria-label='First group'
                             >
-                                <button type="button" className="btn btn-primary text-white bg-secondary border border-secondary">«</button>
-                                <button type="button" className="btn btn-primary text-white bg-secondary border border-secondary">1</button>
-                                <button type="button" className="btn btn-primary text-white bg-secondary border border-secondary">2</button>
-                                <button type="button" className="btn btn-primary text-white bg-secondary border border-secondary">3</button>
-                                <button type="button" className="btn btn-primary text-white bg-secondary border border-secondary">4</button>
+                                <button
+                                    type='button'
+                                    className='btn btn-primary text-white bg-secondary border border-secondary'
+                                >
+                                    «
+                                </button>
+                                <button
+                                    type='button'
+                                    className='btn btn-primary text-white bg-secondary border border-secondary'
+                                >
+                                    1
+                                </button>
+                                <button
+                                    type='button'
+                                    className='btn btn-primary text-white bg-secondary border border-secondary'
+                                >
+                                    2
+                                </button>
+                                <button
+                                    type='button'
+                                    className='btn btn-primary text-white bg-secondary border border-secondary'
+                                >
+                                    3
+                                </button>
+                                <button
+                                    type='button'
+                                    className='btn btn-primary text-white bg-secondary border border-secondary'
+                                >
+                                    4
+                                </button>
 
-                                <button type="button" className="btn btn-primary text-white bg-secondary border border-secondary">»</button>
+                                <button
+                                    type='button'
+                                    className='btn btn-primary text-white bg-secondary border border-secondary'
+                                >
+                                    »
+                                </button>
                             </div>
                         </div>
                     </div>
