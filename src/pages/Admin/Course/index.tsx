@@ -2,9 +2,8 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
 import { Link } from 'react-router-dom'
-import { Icon } from "@iconify/react";
+import { Icon } from '@iconify/react'
 const Course = () => {
-
     const [showActions, setShowActions] = useState({})
 
     const data = [
@@ -15,7 +14,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
 
         {
@@ -24,7 +23,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
 
         {
@@ -33,7 +32,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
 
         {
@@ -42,7 +41,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
 
         {
@@ -51,7 +50,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
         {
             id: 1,
@@ -59,7 +58,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
         {
             id: 1,
@@ -67,7 +66,7 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
+            status: 'Active'
         },
         {
             id: 1,
@@ -75,10 +74,8 @@ const Course = () => {
             author: 'Vu Dung',
             price: '100000',
             lessoncount: '30 Lessons',
-            status: 'Active',
-        },
-
-
+            status: 'Active'
+        }
     ]
 
     const toggleActions = (id) => {
@@ -91,11 +88,11 @@ const Course = () => {
     return (
         <div className='q-table border border-light border-3 rounded-3'>
             <div className='p-4'>
-                <div className="d-flex justify-content-between align-items-center mb-7">
-                    <h2 className='fw-bold text-uppercase'>Articles</h2>
+                <div className='d-flex justify-content-between align-items-center mb-7'>
+                    <h2 className='fw-bold text-uppercase'>course MANAGEMENT</h2>
 
                     <div className='card-tools'>
-                        <Link className='btn btn-success btn-sm' href=''>
+                        <Link className='btn btn-success btn-sm' to=''>
                             <Icon icon='ic:baseline-plus' />
                         </Link>
                     </div>
@@ -121,13 +118,13 @@ const Course = () => {
                                     <td>{item.author}</td>
                                     <td>{item.price}</td>
                                     <td>
-                                        <a
-                                            href="/admin/course/1/lessons"
-                                            class="btn btn-sm btn-primary"
-                                        >30 lessons</a
-                                        >
+                                        <Link to='/admin/course/1/lessons' className='btn btn-sm btn-primary'>
+                                            30 lessons
+                                        </Link>
                                     </td>
-                                    <td><span class="badge bg-success">Active</span></td>
+                                    <td>
+                                        <span className='badge bg-success'>Active</span>
+                                    </td>
                                     <td>
                                         <div className=''>
                                             <button className='btn btn-danger me-2'>Xóa</button>
@@ -195,7 +192,6 @@ const Course = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

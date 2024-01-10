@@ -12,10 +12,9 @@ const HeaderClientComponent = () => {
     return (
         <div>
             <nav className='sb-topnav navbar navbar-expand navbar-dark d-flex justify-content-end bg-light'>
-                
                 <ul className='navbar-nav ms-auto ms-md-0 me-3 me-lg-4'>
                     <div className='dropdown-container'>
-                    <Icon icon="iconamoon:profile" onClick={() => toggleDropdown()} />
+                        <Icon icon='iconamoon:profile' onClick={() => toggleDropdown()} />
 
                         <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
                             <li>

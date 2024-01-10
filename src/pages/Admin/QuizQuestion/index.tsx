@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.scss'
 
 import { Icon } from '@iconify/react'
+import { Link } from 'react-router-dom'
 const QuizQuestion = () => {
     const [showActions, setShowActions] = useState({})
 
@@ -68,13 +69,13 @@ const QuizQuestion = () => {
     return (
         <div className='q-table border border-light border-3 rounded-3'>
             <div className='p-4'>
-                <div class='d-flex justify-content-between align-items-center mb-7'>
-                    <h2 className='fw-bold text-uppercase'>Quiz Question</h2>
+                <div className='d-flex justify-content-between align-items-center mb-7'>
+                    <h2 className='fw-bold text-uppercase'>Quiz Question MANAGEMENT</h2>
 
-                    <div class='card-tools'>
-                        <a class='btn btn-success btn-sm' href=''>
+                    <div className='card-tools'>
+                        <Link className='btn btn-success btn-sm' to=''>
                             <Icon icon='ic:baseline-plus' />
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <table className='table table-bordered'>
@@ -94,10 +95,10 @@ const QuizQuestion = () => {
                                     <td>{item.id}</td>
                                     <td>{item.title}</td>
                                     <td>
-                                        <span class='badge bg-success'>Marketing</span>
+                                        <span className='badge bg-success'>Marketing</span>
                                     </td>
                                     <td>
-                                        <span class='badge bg-success'>Active</span>
+                                        <span className='badge bg-success'>Active</span>
                                     </td>
                                     <td>
                                         <div className=''>
