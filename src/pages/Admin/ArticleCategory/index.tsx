@@ -57,7 +57,7 @@ const ArticleCategory = () => {
             Name: 'Danh Muc Mac Dinh',
             ArticleAccount: '2',
             status: 'Active'
-        },
+        }
     ]
 
     const toggleActions = (id) => {

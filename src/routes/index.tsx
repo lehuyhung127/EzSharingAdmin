@@ -51,7 +51,7 @@ const Routers = () => {
                 <Route path='/admin/adminaccount' element={<AdminAccount />} />
                 <Route path='/admin/roles' element={<Roles />} />
                 <Route path='/admin/articlecategory' element={<ArticleCategory />} />
-                <Route path='/admin/quizquestioncategory' element={<QuizQuestionCategory/>} />
+                <Route path='/admin/quizquestioncategory' element={<QuizQuestionCategory />} />
             </Route>
         </Routes>
     )

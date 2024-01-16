@@ -62,8 +62,7 @@ const AdminAccount = () => {
             Fullname: 'Vu Dung',
             Rolename: 'Quan Tri He Thong',
             status: 'Active'
-        },
-
+        }
     ]
 
     const toggleActions = (id) => {
@@ -104,7 +103,7 @@ const AdminAccount = () => {
                                     <td>{item.Username}</td>
                                     <td>{item.Fullname}</td>
                                     <td>{item.Rolename}</td>
-                                    
+
                                     <td>
                                         <span className='badge bg-success'>Active</span>
                                     </td>

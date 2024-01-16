@@ -50,8 +50,7 @@ const Roles = () => {
             id: 1,
             Name: 'Vu Dung',
             status: 'Active'
-        },
-
+        }
     ]
 
     const toggleActions = (id) => {

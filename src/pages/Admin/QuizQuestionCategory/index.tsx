@@ -49,8 +49,7 @@ const QuizQuestionCategory = () => {
             Name: '10 Vạn Câu Hỏi Vì Sao',
             QuestionCount: '0',
             status: 'Active'
-        },
-        
+        }
     ]
 
     const toggleActions = (id) => {

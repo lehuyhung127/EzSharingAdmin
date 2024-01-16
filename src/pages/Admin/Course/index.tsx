@@ -101,7 +101,7 @@ const Course = () => {
                         </button>
                     </div>
                 </div>
-                <Modal show={showModal} onHide={handleClose} className="my-custom-modal">
+                <Modal show={showModal} onHide={handleClose} className='my-custom-modal'>
                     <Modal.Header closeButton>
                         <Modal.Title>Add New Course</Modal.Title>
                     </Modal.Header>
